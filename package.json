@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "weaviate-client": "^2.14.3"
+  }
+}
