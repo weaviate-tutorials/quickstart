@@ -3,31 +3,12 @@ const weaviate = require("weaviate-client");
 const client = weaviate.client({
     scheme: 'https',
     host: 'some-endpoint.weaviate.network/',  // Replace with your endpoint
-    headers: {'X-OpenAI-Api-Key': '<THE-KEY>'},
+    headers: {'X-OpenAI-Api-Key': '<THE-KEY>'},  // Replace with your API key
   }); 
 
-var classObj = {
-  "class": "Question",
-  "vectorizer": "text2vec-openai"  // Or "text2vec-cohere" or "text2vec-huggingface"
-}
-
-// add the schema
-client
-  .schema
-  .classCreator()
-  .withClass(classObj)
-  .do()
-  .then(res => {
-    console.log(res)
-  })
-  .catch(err => {
-    console.error(err)
-  });
-
 async function getJsonData() {
-    const file = await fetch('https://raw.githubusercontent.com/weaviate/weaviate-examples/main/jeopardy_small_dataset/jeopardy_tiny.json');
-    // const file = await fetch('jeopardy_tiny.json');
-    return file.json();
+  const file = await fetch('https://raw.githubusercontent.com/weaviate-tutorials/quickstart/main/data/jeopardy_tiny.json');
+  return file.json();
 }
 
 async function importQuestions() {
@@ -82,4 +63,4 @@ async function importQuestions() {
   });
 }
 
-importQuestions();
+importQuestions(); 

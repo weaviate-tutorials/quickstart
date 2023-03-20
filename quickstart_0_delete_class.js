@@ -5,7 +5,7 @@ const client = weaviate.client({
     host: 'some-endpoint.weaviate.network/',  // Replace with your endpoint
   }); 
 
-var className = 'Question';
+var className = 'Question';  // Replace with your class name
 
 client.schema
   .classDeleter()
