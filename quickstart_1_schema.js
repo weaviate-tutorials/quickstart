@@ -3,8 +3,8 @@ const weaviate = require('weaviate-client');
 // update the endpoint!
 const client = weaviate.client({
     scheme: 'https',
-    host: 'some-endpoint.weaviate.network/',  // Replace with your endpoint
-  }); 
+    host: 'some-endpoint.weaviate.network',  // Replace with your endpoint
+  });
 
 // we will create the class "Question"
 
@@ -26,7 +26,7 @@ let classObj = {
             "dataType": ["text"],
             "description": "The category",
             "name": "category",
-        },        
+        },
     ],
     "vectorizer": "text2vec-openai",
 }

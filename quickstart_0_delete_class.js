@@ -2,8 +2,8 @@ const weaviate = require("weaviate-client");
 
 const client = weaviate.client({
     scheme: 'https',
-    host: 'some-endpoint.weaviate.network/',  // Replace with your endpoint
-  }); 
+    host: 'some-endpoint.weaviate.network',  // Replace with your endpoint
+  });
 
 var className = 'Question';  // Replace with your class name
 

@@ -2,9 +2,9 @@ const weaviate = require("weaviate-client");
 
 const client = weaviate.client({
     scheme: 'https',
-    host: 'some-endpoint.weaviate.network/',  // Replace with your endpoint
+    host: 'some-endpoint.weaviate.network',  // Replace with your endpoint
     headers: {'X-OpenAI-Api-Key': '<THE-KEY>'},  // Replace with your API key
-  }); 
+  });
 
 async function getJsonData() {
   const file = await fetch('https://raw.githubusercontent.com/weaviate-tutorials/quickstart/main/data/jeopardy_tiny.json');
@@ -45,7 +45,7 @@ async function importQuestions() {
       .catch(err => {
         console.error(err)
       });
-      
+
       // restart the batch queue
       counter = 0;
       batcher = client.batch.objectsBatcher();
@@ -63,4 +63,4 @@ async function importQuestions() {
   });
 }
 
-importQuestions(); 
+importQuestions();
