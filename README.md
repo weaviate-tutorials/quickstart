@@ -1,4 +1,6 @@
-## Weaviate Quickstart Tutorial 
+> Note: We are archiving this repository. The code for the Quickstart tutorial is available in-line on the [site](https://weaviate.io/developers/weaviate/quickstart).
+
+## Weaviate Quickstart Tutorial
 
 This repository contains files related to the [Weaviate Quickstart Tutorial](https://weaviate.io/developers/weaviate/quickstart).
 
